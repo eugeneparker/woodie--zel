@@ -1,0 +1,15 @@
+{
+  "name": "woodie-ozel",
+  "version": "1.0.0",
+  "description": "lel",
+  "main": "bot.js",
+  "dependencies": {
+    "discord.js": "^11.4.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "node bot.js"
+  },
+  "author": "barış demirci",
+  "license": "ISC"
+}
