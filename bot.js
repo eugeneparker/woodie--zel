@@ -6,8 +6,7 @@ client.on('ready', () => {
 });
 
 client.on('message', msg => {
-if(!msg.guild.id === "489825901241171968") return;	
-
+	
   
   if (msg.content === "-kabulet") {
 	  msg.author.send("Kuralları okumuş olduğunu kabul ettin ve artık `@Başlangıç Seviyesi` rolüne sahipsin!")
