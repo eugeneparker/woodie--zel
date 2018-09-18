@@ -9,9 +9,13 @@ client.on('message', msg => {
 	
   
   if (msg.content === "-kabulet") {
-	  msg.author.send("Kuralları okumuş olduğunu kabul ettin ve artık `@Başlangıç Seviyesi` rolüne sahipsin!")
-	  let role = msg.guild.roles.find("name", "Başlangıç Seviyesi");
+	  try {
+	  	  let role = msg.guild.roles.find("name", "Başlangıç Seviyesi");
 	  msg.member.addRole(role.id);
+	  msg.author.send("Kuralları okumuş olduğunu kabul ettin ve artık `@Başlangıç Seviyesi` rolüne sahipsin!")
+	  } catch (err) {
+	  msg.reply("Bir hata oluştu: **" + err + "** Bu hatayı bir yetkiliye bildirerek sen de rolünü alabilirsin!");
+	  }
 	  
   }
 });
