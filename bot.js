@@ -6,9 +6,8 @@ client.on('ready', () => {
 });
 
 client.on('message', msg => {
-	
-  
-  if (msg.content === "-kabulet") {
+	if (msg.channel.id === "489825901241171968") {
+		  if (msg.content === "-kabulet") {
 	  try {
 	  	  let role = msg.guild.roles.find("name", "Başlangıç Seviyesi");
 	  msg.member.addRole(role.id);
@@ -18,6 +17,10 @@ client.on('message', msg => {
 	  }
 	  
   }
+	} else {
+  return msg.reply("Bu komut sadece <#490826053917474826> odasında kullanılabilir!"); 
+
+	}
 });
 
 client.login(process.env.BOT_TOKEN);
